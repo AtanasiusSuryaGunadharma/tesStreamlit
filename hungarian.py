@@ -86,7 +86,7 @@ y = df_clean['target']
 smote = SMOTE(random_state=42)
 X, y = smote.fit_resample(X, y)
 
-model = pickle.load(open("xgb_model.pkl", 'rb'))
+model = "xgb_model.pkl"
 
 y_pred = model.predict(X)
 accuracy = accuracy_score(y, y_pred)
